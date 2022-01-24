@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-medium;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-[2.5rem] tracking-[2px] leading-[1.2];
+  }
+  h3 {
+    @apply text-xl tracking-[5px] leading-[1.3];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-primaryBlack py-4 px-6 rounded-lg shadow-md hover:text-white hover:bg-secondaryPeach;
+  }
+  .btn-darker {
+    @apply text-white bg-primaryPeach hover:text-white hover:bg-secondaryPeach;
+  }
+}
