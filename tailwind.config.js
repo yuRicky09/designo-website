@@ -13,6 +13,16 @@ module.exports = {
         "hero-pattern":
           "url('@/assets/shared/desktop/bg-pattern-call-to-action.svg')",
       },
+      keyframes: {
+        popUp: {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+      },
+      animation: {
+        popUp: "popUp 0.4s ease-in-out",
+        popUpReverse: "popUp 0.4s ease-in-out reverse",
+      },
     },
   },
   plugins: [],
