@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex justify-between items-center py-9 px-6 relative z-50 bg-white"
+    class="flex justify-between items-center py-9 relative z-50 bg-white px-6"
   >
     <div>
       <img
@@ -46,7 +46,7 @@ import CloseIcon from "@/assets/shared/mobile/icon-close.svg";
 import HamburgerIcon from "@/assets/shared/mobile/icon-hamburger.svg";
 import { ref } from "vue";
 
-const mobileNavIsShow = ref(true);
+const mobileNavIsShow = ref(false);
 </script>
 
 <style lang="postcss" scoped>

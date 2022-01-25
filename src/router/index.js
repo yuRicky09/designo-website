@@ -10,6 +10,30 @@ const routes = [
     },
     component: Home,
   },
+  {
+    name: "AppDesign",
+    path: "/design/app",
+    meta: {
+      title: "App Design | Designo",
+    },
+    component: () => import("@/views/AppDesign.vue"),
+  },
+  {
+    name: "WebDesign",
+    path: "/design/web",
+    meta: {
+      title: "Web Design | Designo",
+    },
+    component: () => import("@/views/WebDesign.vue"),
+  },
+  {
+    name: "GraphicDesign",
+    path: "/design/graphic",
+    meta: {
+      title: "Graphic Design | Designo",
+    },
+    component: () => import("@/views/GraphicDesign.vue"),
+  },
 ];
 
 const router = createRouter({
