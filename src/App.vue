@@ -1,6 +1,6 @@
 <template>
   <TheNavigation />
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
     <router-view></router-view>
     <BaseBannerFooter v-if="route.name !== 'Contack'" />
   </div>
@@ -38,8 +38,8 @@ const linksContent = {
     title: "App Design",
     bgImgUrl: {
       phone: "bg-app-design",
-      tablet: "bg-md:app-design-tablet",
-      desktop: "bg-lg:app-design-desktop",
+      tablet: "md:bg-app-design-tablet",
+      desktop: "lg:bg-app-design-desktop",
     },
     url: { name: "AppDesign" },
   },

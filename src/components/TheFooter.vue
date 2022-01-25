@@ -1,14 +1,18 @@
 <template>
-  <div class="text-white px-6 bg-primaryBlack pt-40 pb-16">
-    <div class="flex flex-col items-center text-center">
+  <div class="text-white px-6 bg-primaryBlack pt-40 pb-16 md:px-10">
+    <div
+      class="flex flex-col items-center text-center md:flex-row justify-between md:pb-12 border-b-2 border-white border-opacity-10"
+    >
       <img
         src="@/assets/shared/desktop/logo-light.png"
         alt="Logo Image"
         class="w-52"
       />
-      <div class="h-[2px] bg-white bg-opacity-10 w-full my-6"></div>
+      <div class="h-[2px] bg-white bg-opacity-10 w-full my-6 md:hidden"></div>
       <div>
-        <ul class="flex flex-col items-center gap-3">
+        <ul
+          class="uppercase flex flex-col items-center gap-3 md:flex-row md:gap-10"
+        >
           <li>
             <router-link to="#">Our company</router-link>
           </li>
@@ -22,7 +26,9 @@
       </div>
     </div>
 
-    <div class="flex flex-col items-center text-center gap-6 mt-10">
+    <div
+      class="flex flex-col items-center text-center gap-6 mt-10 md:flex-row md:gap-12"
+    >
       <div class="opacity-50">
         <p class="font-bold">Designo Central Office</p>
         <p>3886 Wellington Street</p>
@@ -33,7 +39,7 @@
         <p>P : +1 253-863-8967</p>
         <p>M : contact@designo.co</p>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 md:flex-1 md:self-end md:justify-end">
         <FacebookIcon />
         <YoutubeIcon />
         <TwitterIcon />

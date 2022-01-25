@@ -13,7 +13,7 @@ module.exports = {
         "pages-intro":
           "url('@/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg')",
         "pages-intro-tablet":
-          "url('@/assets/shared/tablet/bg-pattern-design-pages-intro-mobile.svg')",
+          "url('@/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg')",
         "call-to-action":
           "url('@/assets/shared/desktop/bg-pattern-call-to-action.svg')",
         "web-design": "url('@/assets/home/mobile/image-web-design.jpg')",

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex justify-between items-center py-9 relative z-50 bg-white px-6"
+    class="flex justify-between items-center py-9 relative z-50 bg-white px-6 md:px-10 uppercase"
   >
     <div>
       <img
@@ -9,19 +9,28 @@
         class="w-[200px]"
       />
     </div>
-    <div>
+
+    <!-- desktop-nav -->
+    <div class="hidden md:block">
+      <ul class="text-darkGray flex items-center gap-8">
+        <li><router-link to="#">Our Company</router-link></li>
+        <li><router-link to="#">Locations</router-link></li>
+        <li><router-link to="#">Contact</router-link></li>
+      </ul>
+    </div>
+
+    <!-- mobile-nav -->
+    <div class="md:hidden">
       <HamburgerIcon
         v-show="!mobileNavIsShow"
         @click="mobileNavIsShow = true"
       />
       <CloseIcon v-show="mobileNavIsShow" @click="mobileNavIsShow = false" />
     </div>
-
-    <!-- mobile-nav -->
     <transition name="mobile-nav">
       <div
         v-show="mobileNavIsShow"
-        class="absolute z-40 top-full left-0 w-full origin-top-right"
+        class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
       >
         <ul class="text-white px-6 py-12 bg-primaryBlack text-2xl">
           <li class="mb-4"><router-link to="#">Our Company</router-link></li>
@@ -35,7 +44,7 @@
   <teleport to="body">
     <div
       v-show="mobileNavIsShow"
-      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10"
+      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10 md:hidden"
       @click="mobileNavIsShow = false"
     ></div>
   </teleport>
