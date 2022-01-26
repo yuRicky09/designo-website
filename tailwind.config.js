@@ -32,6 +32,7 @@ module.exports = {
           "url('@/assets/home/tablet/image-graphic-design.jpg')",
         "graphic-design-desktop":
           "url('@/assets/home/desktop/image-graphic-design.jpg')",
+        "pattern-leaf": "url('@/assets/shared/desktop/bg-pattern-leaf.svg')",
       },
       keyframes: {
         popUp: {

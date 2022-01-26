@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex justify-between items-center py-9 relative z-50 bg-white px-6 md:px-10 uppercase"
+    class="flex justify-between items-center py-9 relative z-50 bg-white uppercase px-6 md:px-10 lg:px-24 xl:px-44"
   >
     <div>
       <img
