@@ -1,5 +1,69 @@
 <template>
-  <div>The Navigation</div>
+  <header
+    class="flex justify-between items-center py-9 relative z-50 bg-white uppercase px-6 md:px-10 lg:px-24 xl:px-44"
+  >
+    <div>
+      <img
+        src="@/assets/shared/desktop/logo-dark.png"
+        alt="Logo"
+        class="w-[200px]"
+      />
+    </div>
+
+    <!-- desktop-nav -->
+    <div class="hidden md:block">
+      <ul class="text-darkGray flex items-center gap-8">
+        <li><router-link to="#">Our Company</router-link></li>
+        <li><router-link to="#">Locations</router-link></li>
+        <li><router-link to="#">Contact</router-link></li>
+      </ul>
+    </div>
+
+    <!-- mobile-nav -->
+    <div class="md:hidden">
+      <HamburgerIcon
+        v-show="!mobileNavIsShow"
+        @click="mobileNavIsShow = true"
+      />
+      <CloseIcon v-show="mobileNavIsShow" @click="mobileNavIsShow = false" />
+    </div>
+    <transition name="mobile-nav">
+      <div
+        v-show="mobileNavIsShow"
+        class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
+      >
+        <ul class="text-white px-6 py-12 bg-primaryBlack text-2xl">
+          <li class="mb-4"><router-link to="#">Our Company</router-link></li>
+          <li class="mb-4"><router-link to="#">Locations</router-link></li>
+          <li><router-link to="#">Contact</router-link></li>
+        </ul>
+      </div>
+    </transition>
+  </header>
+  <!-- overlay -->
+  <teleport to="body">
+    <div
+      v-show="mobileNavIsShow"
+      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10 md:hidden"
+      @click="mobileNavIsShow = false"
+    ></div>
+  </teleport>
 </template>
 
-<script setup></script>
+<script setup>
+import CloseIcon from "@/assets/shared/mobile/icon-close.svg";
+import HamburgerIcon from "@/assets/shared/mobile/icon-hamburger.svg";
+import { ref } from "vue";
+
+const mobileNavIsShow = ref(false);
+</script>
+
+<style lang="postcss" scoped>
+.mobile-nav-enter-active {
+  @apply animate-popUp;
+}
+
+.mobile-nav-leave-active {
+  @apply animate-popUpReverse;
+}
+</style>
