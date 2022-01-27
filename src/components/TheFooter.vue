@@ -1,28 +1,42 @@
 <template>
   <div
-    class="text-white px-6 bg-primaryBlack pt-40 pb-16 md:px-10 lg:px-24 xl:px-44 xl:pt-52"
+    class="max-w-[90rem] mx-auto text-white pt-40 px-6 pb-16 md:px-10 lg:px-24 xl:px-40 xl:pt-52"
   >
     <div
       class="flex flex-col items-center text-center md:flex-row justify-between md:pb-12 md:border-b-2 md:border-white md:border-opacity-10"
     >
-      <img
-        src="@/assets/shared/desktop/logo-light.png"
-        alt="Logo Image"
-        class="w-52"
-      />
+      <router-link :to="{ name: 'Home' }">
+        <img
+          src="@/assets/shared/desktop/logo-light.png"
+          alt="Logo Image"
+          class="w-52"
+        />
+      </router-link>
       <div class="h-[2px] bg-white bg-opacity-10 w-full my-6 md:hidden"></div>
       <div>
         <ul
           class="uppercase flex flex-col items-center gap-3 md:flex-row md:gap-10"
         >
           <li>
-            <router-link to="#">Our company</router-link>
+            <router-link
+              to="#"
+              class="hover:text-primaryPeach transition-colors duration-200"
+              >Our company</router-link
+            >
           </li>
           <li>
-            <router-link to="#">Locations</router-link>
+            <router-link
+              to="#"
+              class="hover:text-primaryPeach transition-colors duration-200"
+              >Locations</router-link
+            >
           </li>
           <li>
-            <router-link to="#">Contact</router-link>
+            <router-link
+              to="#"
+              class="hover:text-primaryPeach transition-colors duration-200"
+              >Contact</router-link
+            >
           </li>
         </ul>
       </div>
@@ -42,11 +56,11 @@
         <p>M : contact@designo.co</p>
       </div>
       <div class="flex items-center gap-4 md:flex-1 md:self-end md:justify-end">
-        <FacebookIcon />
-        <YoutubeIcon />
-        <TwitterIcon />
-        <PinterestIcon />
-        <InstagramIcon />
+        <FacebookIcon class="icon" />
+        <YoutubeIcon class="icon" />
+        <TwitterIcon class="icon" />
+        <PinterestIcon class="icon" />
+        <InstagramIcon class="icon" />
       </div>
     </div>
   </div>

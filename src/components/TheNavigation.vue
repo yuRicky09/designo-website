@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex justify-between items-center py-9 relative z-50 bg-white uppercase px-6 md:px-10 lg:px-24 xl:px-44"
+    class="flex justify-between items-center py-9 relative z-50 bg-white uppercase -mx-6 px-6 md:mx-0 md:px-0 md:py-16"
   >
     <router-link :to="{ name: 'Home' }">
       <img
@@ -13,9 +13,7 @@
     <!-- desktop-nav -->
     <div class="hidden md:block">
       <ul class="text-darkGray flex items-center gap-8">
-        <li class="">
-          <router-link to="#" class="nav-link">Our Company</router-link>
-        </li>
+        <li><router-link to="#" class="nav-link">Our Company</router-link></li>
         <li><router-link to="#" class="nav-link">Locations</router-link></li>
         <li><router-link to="#" class="nav-link">Contact</router-link></li>
       </ul>

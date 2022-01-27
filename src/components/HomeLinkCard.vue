@@ -11,9 +11,14 @@
     <h2>
       {{ card.title }}
     </h2>
-    <router-link :to="card.url" class="flex items-center gap-4 tracking-[5px]">
+    <router-link
+      :to="card.url"
+      class="flex items-center gap-4 tracking-[5px] group hover:text-primaryPeach transition-colors duration-300"
+    >
       View Projects
-      <RightArrorIcon />
+      <RightArrorIcon
+        class="group-hover:translate-x-2 duration-300 transition-transform"
+      />
     </router-link>
   </div>
 </template>
