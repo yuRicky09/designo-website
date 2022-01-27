@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uppercase h-64 text-white text-center px-14 bg-no-repeat bg-cover bg-center bg-black bg-opacity-50 bg-blend-darken rounded-xl flex flex-col items-center justify-center gap-3 md:h-52 lg:h-auto lg:max-h-[40rem]"
+    class="uppercase h-64 text-white text-center px-14 bg-no-repeat bg-cover bg-center bg-black bg-opacity-50 bg-blend-darken rounded-lg flex flex-col items-center justify-center gap-3 md:h-52 lg:h-auto lg:max-h-[40rem]"
     :class="[
       card.bgImgUrl.phone,
       card.bgImgUrl.tablet,
@@ -11,9 +11,14 @@
     <h2>
       {{ card.title }}
     </h2>
-    <router-link :to="card.url" class="flex items-center gap-4 tracking-[5px]">
+    <router-link
+      :to="card.url"
+      class="flex items-center gap-4 tracking-[5px] group hover:text-primaryPeach transition-colors duration-300"
+    >
       View Projects
-      <RightArrorIcon />
+      <RightArrorIcon
+        class="group-hover:translate-x-2 duration-300 transition-transform"
+      />
     </router-link>
   </div>
 </template>

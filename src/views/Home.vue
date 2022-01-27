@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primaryPeach relative bg-[url('@/assets/home/desktop/bg-pattern-hero-home.svg')] bg-no-repeat pt-16 rounded-lg -mx-[1.5rem] pb-[26rem] overflow-hidden md:mx-0 sm:px-16 md:px-24 md:pb-[28rem] md:bg-[center_right_-8rem] lg:pb-36 lg:pt-36 lg:bg-[right]"
+    class="bg-primaryPeach relative bg-[url('@/assets/home/desktop/bg-pattern-hero-home.svg')] bg-no-repeat pt-16 md:rounded-lg -mx-[1.5rem] px-4 pb-[26rem] overflow-hidden md:mx-0 sm:px-16 md:px-24 md:pb-[28rem] md:bg-[center_right_-8rem] lg:pb-36 lg:pt-36 lg:bg-[right]"
   >
     <div
       class="text-white flex flex-col items-center text-center lg:w-[55%] lg:text-left lg:items-start"

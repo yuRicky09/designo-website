@@ -1,19 +1,22 @@
 <template>
-  <TheNavigation />
   <div
-    class="relative max-w-[90rem] mx-auto px-6 md:px-10 lg:px-24 xl:px-44 xl:before:bg-pattern-leaf xl:before:absolute xl:before:top-[16.75rem] xl:before:left-0 xl:before:w-[1000px] xl:before:h-[594px] xl:before:-z-10 xl:after:bg-pattern-leaf xl:after:absolute xl:after:bottom-[4rem] xl:after:right-0 xl:after:w-[1000px] xl:after:h-[594px] xl:after:-z-10 xl:after:rotate-180"
+    class="relative max-w-[90rem] mx-auto px-6 md:px-10 lg:px-24 xl:px-40 xl:before:bg-pattern-leaf xl:before:absolute xl:before:top-[21rem] xl:before:left-0 xl:before:w-[1000px] xl:before:h-[594px] xl:before:-z-20 xl:after:bg-pattern-leaf xl:after:absolute xl:after:bottom-[2rem] xl:after:right-0 xl:after:w-[1000px] xl:after:h-[594px] xl:after:-z-20 xl:after:rotate-180"
+    :class="showBgPattern"
   >
+    <TheNavigation />
     <router-view></router-view>
     <BaseBannerFooter v-if="route.name !== 'Contack'" />
   </div>
-  <TheFooter />
+  <div class="bg-primaryBlack">
+    <TheFooter />
+  </div>
 </template>
 
 <script setup>
 import TheNavigation from "@/components/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import BaseBannerFooter from "@/components/UI/BaseBannerFooter.vue";
-import { provide } from "vue";
+import { provide, computed } from "vue";
 import { useRoute } from "vue-router";
 
 const linksContent = {
@@ -50,4 +53,8 @@ const linksContent = {
 provide("linksContent", linksContent);
 
 const route = useRoute();
+
+const showBgPattern = computed(() => {
+  return route.name === "Home" ? "xl:after:block" : "xl:after:hidden";
+});
 </script>
