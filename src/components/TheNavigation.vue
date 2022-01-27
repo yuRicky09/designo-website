@@ -2,20 +2,22 @@
   <header
     class="flex justify-between items-center py-9 relative z-50 bg-white uppercase px-6 md:px-10 lg:px-24 xl:px-44"
   >
-    <div>
+    <router-link :to="{ name: 'Home' }">
       <img
         src="@/assets/shared/desktop/logo-dark.png"
         alt="Logo"
         class="w-[200px]"
       />
-    </div>
+    </router-link>
 
     <!-- desktop-nav -->
     <div class="hidden md:block">
       <ul class="text-darkGray flex items-center gap-8">
-        <li><router-link to="#">Our Company</router-link></li>
-        <li><router-link to="#">Locations</router-link></li>
-        <li><router-link to="#">Contact</router-link></li>
+        <li class="">
+          <router-link to="#" class="nav-link">Our Company</router-link>
+        </li>
+        <li><router-link to="#" class="nav-link">Locations</router-link></li>
+        <li><router-link to="#" class="nav-link">Contact</router-link></li>
       </ul>
     </div>
 

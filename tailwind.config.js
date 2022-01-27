@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         primaryPeach: "#E7816B",
         secondaryPeach: "#FFAD9B",
+        lightPeach: "#FDF3F0",
         primaryBlack: "#1D1C1E",
         darkGray: "#333136",
         lightGray: "#F1F3F5",

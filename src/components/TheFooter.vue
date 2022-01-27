@@ -1,9 +1,9 @@
 <template>
   <div
-    class="text-white px-6 bg-primaryBlack pt-40 pb-16 md:px-10 lg:px-24 xl:px-44"
+    class="text-white px-6 bg-primaryBlack pt-40 pb-16 md:px-10 lg:px-24 xl:px-44 xl:pt-52"
   >
     <div
-      class="flex flex-col items-center text-center md:flex-row justify-between md:pb-12 border-b-2 border-white border-opacity-10"
+      class="flex flex-col items-center text-center md:flex-row justify-between md:pb-12 md:border-b-2 md:border-white md:border-opacity-10"
     >
       <img
         src="@/assets/shared/desktop/logo-light.png"
@@ -29,7 +29,7 @@
     </div>
 
     <div
-      class="flex flex-col items-center text-center gap-6 mt-10 md:flex-row md:gap-12 lg:gap-20 xl:gap-52"
+      class="flex flex-col items-center text-center gap-10 mt-10 md:flex-row md:gap-12 lg:gap-20 xl:gap-52"
     >
       <div class="opacity-50">
         <p class="font-bold">Designo Central Office</p>
