@@ -1,0 +1,83 @@
+<template>
+  <div
+    class="-mx-6 flex flex-col items-center sm:mx-20 md:mx-0 md:rounded-lg overflow-hidden md:mb-28 lg:mb-32 xl:mb-40 xl:flex-row"
+    :class="cardCustomStyle.bgColor"
+  >
+    <img :src="imgUrl" :alt="card.title" class="w-full h-full object-cover" />
+    <div
+      class="px-6 py-20 text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-no-repeat md:px-16 lg:self-stretch lg:flex lg:items-center lg:justify-center lg:flex-col lg:px-20 lg:text-left xl:px-24"
+      :class="[cardCustomStyle.bgImg, cardItemOrder]"
+    >
+      <h2 class="mb-6 relative z-10" :class="cardCustomStyle.titleColor">
+        {{ card.title }}
+      </h2>
+      <p class="relative z-10" :class="cardCustomStyle.textColor">
+        {{ card.description.paragraphOne }}
+      </p>
+      <br v-if="card.description.paragraphTwo" />
+      <p class="relative z-10">{{ card.description.paragraphTwo }}</p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { useImage } from "@/composables/useImage";
+import { onMounted, onBeforeUnmount } from "vue";
+
+const props = defineProps({
+  card: {
+    type: Object,
+    required: true,
+  },
+  cardCustomStyle: {
+    type: Object,
+    default() {
+      return {
+        titleColor: "text-primaryPeach",
+        textColor: "text-darkGray",
+        bgImg:
+          "before:bg-pages-intro before:bg-cover before:-scale-100 before:bg-right-top md:before:bg-[right_3rem_top_2rem] xl:before:bg-[right_-20rem_bottom_3rem]",
+        bgColor: "bg-lightPeach",
+      };
+    },
+  },
+  cardItemOrder: {
+    type: String,
+    default: "order-0",
+  },
+});
+
+const { imgUrl, getImgUrl } = useImage();
+const desktopWidth = 1280;
+const tabletWidth = 768;
+
+// check viewport width, set suitable image size
+function setImgUrl() {
+  const viewportWidth = getViewportWidth();
+  const imgPath = getImgPath(viewportWidth);
+  getImgUrl(imgPath);
+}
+
+function getViewportWidth() {
+  return window.innerWidth;
+}
+
+function getImgPath(viewportWidth) {
+  let imgPath;
+
+  if (viewportWidth >= desktopWidth) {
+    imgPath = `../assets/about/desktop/${props.card.imgName}`;
+  } else if (viewportWidth >= tabletWidth) {
+    imgPath = `../assets/about/tablet/${props.card.imgName}`;
+  } else {
+    imgPath = `../assets/about/mobile/${props.card.imgName}`;
+  }
+
+  return imgPath;
+}
+
+setImgUrl();
+
+onMounted(() => window.addEventListener("resize", setImgUrl));
+onBeforeUnmount(() => window.removeEventListener("resize", setImgUrl));
+</script>

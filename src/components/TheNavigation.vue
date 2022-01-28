@@ -13,7 +13,11 @@
     <!-- desktop-nav -->
     <div class="hidden md:block">
       <ul class="text-darkGray flex items-center gap-8">
-        <li><router-link to="#" class="nav-link">Our Company</router-link></li>
+        <li>
+          <router-link :to="{ name: 'About' }" class="nav-link"
+            >Our Company</router-link
+          >
+        </li>
         <li><router-link to="#" class="nav-link">Locations</router-link></li>
         <li><router-link to="#" class="nav-link">Contact</router-link></li>
       </ul>
@@ -33,7 +37,9 @@
         class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
       >
         <ul class="text-white px-6 py-12 bg-primaryBlack text-2xl">
-          <li class="mb-4"><router-link to="#">Our Company</router-link></li>
+          <li class="mb-4">
+            <router-link :to="{ name: 'About' }">Our Company</router-link>
+          </li>
           <li class="mb-4"><router-link to="#">Locations</router-link></li>
           <li><router-link to="#">Contact</router-link></li>
         </ul>

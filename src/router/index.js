@@ -34,6 +34,14 @@ const routes = [
     },
     component: () => import("@/views/GraphicDesign.vue"),
   },
+  {
+    name: "About",
+    path: "/about",
+    meta: {
+      title: "About | Designo",
+    },
+    component: () => import("@/views/About.vue"),
+  },
 ];
 
 const router = createRouter({

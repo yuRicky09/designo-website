@@ -17,23 +17,33 @@ module.exports = {
           "url('@/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg')",
         "call-to-action":
           "url('@/assets/shared/desktop/bg-pattern-call-to-action.svg')",
+        "small-circle":
+          "url('@/assets/shared/desktop/bg-pattern-small-circle.svg')",
+
         "web-design": "url('@/assets/home/mobile/image-web-design.jpg')",
         "web-design-tablet": "url('@/assets/home/tablet/image-web-design.jpg')",
         "web-design-desktop":
           "url('@/assets/home/desktop/image-web-design-small.jpg')",
         "web-design-desktop-big":
           "url('@/assets/home/desktop/image-web-design-large.jpg')",
+
         "app-design": "url('@/assets/home/mobile/image-app-design.jpg')",
         "app-design-tablet": "url('@/assets/home/tablet/image-app-design.jpg')",
         "app-design-desktop":
           "url('@/assets/home/desktop/image-app-design.jpg')",
+
         "graphic-design":
           "url('@/assets/home/mobile/image-graphic-design.jpg')",
         "graphic-design-tablet":
           "url('@/assets/home/tablet/image-graphic-design.jpg')",
         "graphic-design-desktop":
           "url('@/assets/home/desktop/image-graphic-design.jpg')",
+
         "pattern-leaf": "url('@/assets/shared/desktop/bg-pattern-leaf.svg')",
+        "pattern-hero-about-mobile":
+          "url('@/assets/about/mobile/bg-pattern-hero-about-mobile.svg')",
+        "pattern-hero-about-desktop":
+          "url('@/assets/about/desktop/bg-pattern-hero-about-desktop.svg')",
       },
       keyframes: {
         popUp: {

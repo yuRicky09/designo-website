@@ -1,8 +1,8 @@
 <template>
   <BaseCard
-    class="flex flex-col bg-lightPeach md:flex-row md:items-center lg:flex-col cursor-pointer group"
+    class="flex flex-col bg-lightPeach md:flex-row md:items-center lg:flex-col cursor-pointer group hover:bg-primaryPeach"
   >
-    <div class="overflow-hidden group md:w-1/2 lg:w-auto">
+    <div class="overflow-hidden md:w-1/2 lg:w-full">
       <img
         :src="imgUrl"
         alt="Project Image"
@@ -10,7 +10,7 @@
       />
     </div>
     <div
-      class="text-center py-8 px-7 md:w-1/2 lg:w-auto group-hover:bg-primaryPeach transition-colors duration-300"
+      class="text-center py-8 px-7 md:w-1/2 lg:w-auto transition-colors duration-300"
     >
       <h3 class="text-primaryPeach uppercase mb-5 group-hover:text-white">
         {{ project.title }}
@@ -23,6 +23,7 @@
 <script setup>
 import { inject } from "vue";
 import BaseCard from "@/components/UI/BaseCard.vue";
+import { useImage } from "@/composables/useImage";
 
 const props = defineProps({
   project: {
@@ -31,12 +32,10 @@ const props = defineProps({
   },
 });
 
-const projectType = inject("projectType");
+// Dynamic import project's image
+const imgFileName = inject("imgFileName");
+const imgPath = `../assets/${imgFileName}/desktop/${props.project.imgName}`;
+const { imgUrl, getImgUrl } = useImage();
 
-function getImageUrl(name) {
-  return new URL(`../assets/${projectType}/desktop/${name}`, import.meta.url)
-    .href;
-}
-
-const imgUrl = getImageUrl(props.project.imgName);
+getImgUrl(imgPath);
 </script>

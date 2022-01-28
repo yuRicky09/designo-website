@@ -4,7 +4,9 @@
     :class="showBgPattern"
   >
     <TheNavigation />
-    <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
     <BaseBannerFooter v-if="route.name !== 'Contack'" />
   </div>
   <div class="bg-primaryBlack">
@@ -55,6 +57,14 @@ provide("linksContent", linksContent);
 const route = useRoute();
 
 const showBgPattern = computed(() => {
-  return route.name === "Home" ? "xl:after:block" : "xl:after:hidden";
+  if (
+    route.name === "Home" ||
+    route.name === "About" ||
+    route.name === "Contact"
+  ) {
+    return "xl:after:block";
+  } else {
+    return "xl:after:hidden";
+  }
 });
 </script>
