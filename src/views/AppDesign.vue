@@ -57,7 +57,7 @@ const appDesignProjects = [
   },
 ];
 
-provide("projectType", "app-design");
+provide("imgFileName", "app-design");
 
 const { webDesignLink, graphicDesignLink } = inject("linksContent");
 const linksCards = [webDesignLink, graphicDesignLink];
