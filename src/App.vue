@@ -5,7 +5,11 @@
   >
     <TheNavigation />
     <main>
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <Transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </Transition>
+      </router-view>
     </main>
     <BaseBannerFooter v-if="route.name !== 'Contact'" />
   </div>
@@ -68,3 +72,13 @@ const showBgPattern = computed(() => {
   }
 });
 </script>
+
+<style lang="postcss" scoped>
+.fade-enter-active {
+  @apply animate-fade;
+}
+
+.fade-leave-active {
+  @apply animate-fadeReverse;
+}
+</style>

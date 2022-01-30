@@ -18,7 +18,11 @@
             >Our Company</router-link
           >
         </li>
-        <li><router-link to="#" class="nav-link">Locations</router-link></li>
+        <li>
+          <router-link :to="{ name: 'Locations' }" class="nav-link"
+            >Locations</router-link
+          >
+        </li>
         <li>
           <router-link :to="{ name: 'Contact' }" class="nav-link"
             >Contact</router-link
@@ -32,7 +36,7 @@
       <HamburgerIcon v-show="!mobileNavIsShow" @click="showMobileNav" />
       <CloseIcon v-show="mobileNavIsShow" @click="closeMobileNav" />
     </div>
-    <transition name="mobile-nav">
+    <Transition name="mobile-nav">
       <div
         v-show="mobileNavIsShow"
         class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
@@ -42,7 +46,7 @@
             <router-link :to="{ name: 'About' }">Our Company</router-link>
           </li>
           <li class="mb-4" @click="closeMobileNav">
-            <router-link to="#">Locations</router-link>
+            <router-link :to="{ name: 'Locations' }">Locations</router-link>
           </li>
           <li>
             <router-link :to="{ name: 'Contact' }" @click="closeMobileNav"
@@ -51,7 +55,7 @@
           </li>
         </ul>
       </div>
-    </transition>
+    </Transition>
   </header>
   <!-- overlay -->
   <teleport to="body">

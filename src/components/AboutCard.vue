@@ -5,7 +5,7 @@
   >
     <img :src="imgUrl" :alt="card.title" class="w-full h-full object-cover" />
     <div
-      class="px-6 py-20 text-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-no-repeat md:px-16 lg:self-stretch lg:flex lg:items-center lg:justify-center lg:flex-col lg:px-20 lg:text-left xl:px-24"
+      class="px-6 py-20 text-center relative before:absolute before:opacity-20 before:top-0 before:left-0 before:w-full before:h-full before:bg-no-repeat md:px-16 lg:self-stretch lg:flex lg:items-center lg:justify-center lg:flex-col lg:px-20 lg:text-left xl:px-24"
       :class="[cardCustomStyle.bgImg, cardItemOrder]"
     >
       <h2 class="mb-6 relative z-10" :class="cardCustomStyle.titleColor">

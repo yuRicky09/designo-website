@@ -7,7 +7,9 @@
       <img :src="link.imgUrl" :alt="link.locationName" />
     </div>
     <h3 class="mb-8">{{ link.locationName }}</h3>
-    <router-link class="btn btn-darker" to="#">See Loaction</router-link>
+    <router-link class="btn btn-darker" :to="{ name: 'Locations' }"
+      >See Loaction</router-link
+    >
   </div>
 </template>
 
