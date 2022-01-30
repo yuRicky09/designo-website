@@ -7,7 +7,7 @@
     <main>
       <router-view></router-view>
     </main>
-    <BaseBannerFooter v-if="route.name !== 'Contack'" />
+    <BaseBannerFooter v-if="route.name !== 'Contact'" />
   </div>
   <div class="bg-primaryBlack">
     <TheFooter />
