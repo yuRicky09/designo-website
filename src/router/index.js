@@ -50,6 +50,14 @@ const routes = [
     },
     component: () => import("@/views/Contact.vue"),
   },
+  {
+    name: "Locations",
+    path: "/Locations",
+    meta: {
+      title: "Locations | Designo",
+    },
+    component: () => import("@/views/Locations.vue"),
+  },
 ];
 
 const router = createRouter({

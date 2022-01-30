@@ -1,44 +1,50 @@
 <template>
-  <div
-    class="bg-primaryPeach relative bg-[url('@/assets/home/desktop/bg-pattern-hero-home.svg')] bg-no-repeat pt-16 md:rounded-lg -mx-[1.5rem] px-4 pb-[26rem] overflow-hidden md:mx-0 sm:px-16 md:px-24 md:pb-[28rem] md:bg-[center_right_-8rem] lg:pb-36 lg:pt-36 lg:bg-[right]"
-  >
+  <div>
     <div
-      class="text-white flex flex-col items-center text-center lg:w-[55%] lg:text-left lg:items-start"
+      class="bg-primaryPeach relative bg-[url('@/assets/home/desktop/bg-pattern-hero-home.svg')] bg-no-repeat pt-16 md:rounded-lg -mx-[1.5rem] px-4 pb-[26rem] overflow-hidden md:mx-0 sm:px-16 md:px-24 md:pb-[28rem] md:bg-[center_right_-8rem] lg:pb-36 lg:pt-36 lg:bg-[right]"
     >
-      <h1 class="mb-6">
-        Award-winning custom designs and digital branding solutions
-      </h1>
-      <p class="mb-5">
-        With over 10 years in the industry, we are experienced in creating fully
-        responsive websites, app design, and engaging brand experiences. Find
-        out more about our services.
-      </p>
-      <button class="btn">Learn more</button>
+      <div
+        class="text-white flex flex-col items-center text-center lg:w-[55%] lg:text-left lg:items-start"
+      >
+        <h1 class="mb-6">
+          Award-winning custom designs and digital branding solutions
+        </h1>
+        <p class="mb-5">
+          With over 10 years in the industry, we are experienced in creating
+          fully responsive websites, app design, and engaging brand experiences.
+          Find out more about our services.
+        </p>
+        <button class="btn">Learn more</button>
+      </div>
+
+      <img
+        src="@/assets/home/desktop/image-hero-phone.png"
+        alt="Phone Image"
+        class="scale-[1.5] absolute left-1/2 top-[calc(50%_+_40px)] -translate-x-1/2 md:scale-100 md:top-[35%] lg:left-3/4 lg:top-[calc(0%_-_1.5rem)]"
+      />
     </div>
 
-    <img
-      src="@/assets/home/desktop/image-hero-phone.png"
-      alt="Phone Image"
-      class="scale-[1.5] absolute left-1/2 top-[calc(50%_+_40px)] -translate-x-1/2 md:scale-100 md:top-[35%] lg:left-3/4 lg:top-[calc(0%_-_1.5rem)]"
-    />
+    <section
+      class="grid grid-cols-1 gap-6 my-32 lg:grid-cols-2 lg:grid-rows-2 lg:gap-7 lg:items-stretch"
+    >
+      <HomeLinkCard
+        v-for="(card, index) in linkCards"
+        :key="card.title"
+        :card="card"
+        :class="{
+          [gridItemOneStyle]: index === 0,
+        }"
+      />
+    </section>
+
+    <section class="flex flex-col gap-20 xl:flex-row xl:mt-40 my-12">
+      <HomeIntroCard
+        v-for="card in introCards"
+        :key="card.title"
+        :card="card"
+      />
+    </section>
   </div>
-
-  <section
-    class="grid grid-cols-1 gap-6 my-32 lg:grid-cols-2 lg:grid-rows-2 lg:gap-7 lg:items-stretch"
-  >
-    <HomeLinkCard
-      v-for="(card, index) in linkCards"
-      :key="card.title"
-      :card="card"
-      :class="{
-        [gridItemOneStyle]: index === 0,
-      }"
-    />
-  </section>
-
-  <section class="flex flex-col gap-20 xl:flex-row xl:mt-40 my-12">
-    <HomeIntroCard v-for="card in introCards" :key="card.title" :card="card" />
-  </section>
 </template>
 
 <script setup>

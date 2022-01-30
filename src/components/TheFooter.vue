@@ -19,21 +19,21 @@
         >
           <li>
             <router-link
-              to="#"
+              :to="{ name: 'About' }"
               class="hover:text-primaryPeach transition-colors duration-200"
               >Our company</router-link
             >
           </li>
           <li>
             <router-link
-              to="#"
+              :to="{ name: 'Locations' }"
               class="hover:text-primaryPeach transition-colors duration-200"
               >Locations</router-link
             >
           </li>
           <li>
             <router-link
-              to="#"
+              :to="{ name: 'Contact' }"
               class="hover:text-primaryPeach transition-colors duration-200"
               >Contact</router-link
             >
