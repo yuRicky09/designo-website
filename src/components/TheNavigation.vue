@@ -19,17 +19,18 @@
           >
         </li>
         <li><router-link to="#" class="nav-link">Locations</router-link></li>
-        <li><router-link to="#" class="nav-link">Contact</router-link></li>
+        <li>
+          <router-link :to="{ name: 'Contact' }" class="nav-link"
+            >Contact</router-link
+          >
+        </li>
       </ul>
     </div>
 
     <!-- mobile-nav -->
     <div class="md:hidden">
-      <HamburgerIcon
-        v-show="!mobileNavIsShow"
-        @click="mobileNavIsShow = true"
-      />
-      <CloseIcon v-show="mobileNavIsShow" @click="mobileNavIsShow = false" />
+      <HamburgerIcon v-show="!mobileNavIsShow" @click="showMobileNav" />
+      <CloseIcon v-show="mobileNavIsShow" @click="closeMobileNav" />
     </div>
     <transition name="mobile-nav">
       <div
@@ -37,11 +38,17 @@
         class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
       >
         <ul class="text-white px-6 py-12 bg-primaryBlack text-2xl">
-          <li class="mb-4">
+          <li class="mb-4" @click="closeMobileNav">
             <router-link :to="{ name: 'About' }">Our Company</router-link>
           </li>
-          <li class="mb-4"><router-link to="#">Locations</router-link></li>
-          <li><router-link to="#">Contact</router-link></li>
+          <li class="mb-4" @click="closeMobileNav">
+            <router-link to="#">Locations</router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'Contact' }" @click="closeMobileNav"
+              >Contact</router-link
+            >
+          </li>
         </ul>
       </div>
     </transition>
@@ -62,6 +69,13 @@ import HamburgerIcon from "@/assets/shared/mobile/icon-hamburger.svg";
 import { ref } from "vue";
 
 const mobileNavIsShow = ref(false);
+function showMobileNav() {
+  mobileNavIsShow.value = true;
+}
+
+function closeMobileNav() {
+  mobileNavIsShow.value = false;
+}
 </script>
 
 <style lang="postcss" scoped>

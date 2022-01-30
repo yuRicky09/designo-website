@@ -42,6 +42,14 @@ const routes = [
     },
     component: () => import("@/views/About.vue"),
   },
+  {
+    name: "Contact",
+    path: "/contact",
+    meta: {
+      title: "Contact | Designo",
+    },
+    component: () => import("@/views/Contact.vue"),
+  },
 ];
 
 const router = createRouter({

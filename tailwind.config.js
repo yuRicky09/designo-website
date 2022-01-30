@@ -44,6 +44,11 @@ module.exports = {
           "url('@/assets/about/mobile/bg-pattern-hero-about-mobile.svg')",
         "pattern-hero-about-desktop":
           "url('@/assets/about/desktop/bg-pattern-hero-about-desktop.svg')",
+
+        "hero-contact-mobile":
+          "url('@/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg')",
+        "hero-contact-desktop":
+          "url('@/assets/contact/desktop/bg-pattern-hero-desktop.svg')",
       },
       keyframes: {
         popUp: {
