@@ -50,8 +50,9 @@ const props = defineProps({
   },
 });
 
+const mapboxKey = import.meta.env.VITE_MAP_BOX_KEY;
 onMounted(() => {
-  mapboxgl.accessToken = import.meta.env.VITE_MAP_BOX_KEY;
+  mapboxgl.accessToken = mapboxKey;
   const map = new mapboxgl.Map({
     container: props.mapId,
     style: "mapbox://styles/mapbox/streets-v11",
