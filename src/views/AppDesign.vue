@@ -28,30 +28,30 @@ import HomeLinkCard from "@/components/HomeLinkCard.vue";
 
 const appDesignProjects = [
   {
-    imgName: "image-airfilter.jpg",
+    imgName: "image-airfilter",
     title: "Airfilter",
     description:
       "Solving the problem of poor indoor air quality by filtering the air",
   },
   {
-    imgName: "image-eyecam.jpg",
+    imgName: "image-eyecam",
     title: "Eyecam",
     description:
       "Product that lets you edit your favorite photos and videos at any time",
   },
   {
-    imgName: "image-faceit.jpg",
+    imgName: "image-faceit",
     title: "Faceit",
     description:
       "Get to meet your favorite internet superstar with the faceit app",
   },
   {
-    imgName: "image-todo.jpg",
+    imgName: "image-todo",
     title: "Todo",
     description: "A todo app that features cloud sync with light and dark mode",
   },
   {
-    imgName: "image-loopstudios.jpg",
+    imgName: "image-loopstudios",
     title: "Loopstudios",
     description: "A VR experience app made for Loopstudios",
   },

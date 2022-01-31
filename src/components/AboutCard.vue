@@ -55,7 +55,7 @@ const tabletWidth = 768;
 function setImgUrl() {
   const viewportWidth = getViewportWidth();
   const imgPath = getImgPath(viewportWidth);
-  getImgUrl(imgPath);
+  getImgUrl(imgPath, props.card.imgName);
 }
 
 function getViewportWidth() {
@@ -66,11 +66,11 @@ function getImgPath(viewportWidth) {
   let imgPath;
 
   if (viewportWidth >= desktopWidth) {
-    imgPath = `../assets/about/desktop/${props.card.imgName}`;
+    imgPath = `about/desktop`;
   } else if (viewportWidth >= tabletWidth) {
-    imgPath = `../assets/about/tablet/${props.card.imgName}`;
+    imgPath = `about/tablet`;
   } else {
-    imgPath = `../assets/about/mobile/${props.card.imgName}`;
+    imgPath = `about/mobile`;
   }
 
   return imgPath;

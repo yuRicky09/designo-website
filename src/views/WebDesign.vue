@@ -27,36 +27,36 @@ import { provide, inject } from "vue";
 
 const webDesignProjects = [
   {
-    imgName: "image-express.jpg",
+    imgName: "image-express",
     title: "Express",
     description: "A multi-carrier shipping website for ecommerce businesses",
   },
   {
-    imgName: "image-transfer.jpg",
+    imgName: "image-transfer",
     title: "Transfer",
     description:
       "Site for low-cost money transfers and sending money within seconds",
   },
   {
-    imgName: "image-photon.jpg",
+    imgName: "image-photon",
     title: "Photon",
     description:
       "A state-of-the-art music player with high-resolution audio and DSP effects",
   },
   {
-    imgName: "image-builder.jpg",
+    imgName: "image-builder",
     title: "Builder",
     description:
       "Connects users with local contractors based on their location",
   },
   {
-    imgName: "image-blogr.jpg",
+    imgName: "image-blogr",
     title: "Blogr",
     description:
       "Blogr is a platform for creating an online blog or publication",
   },
   {
-    imgName: "image-camp.jpg",
+    imgName: "image-camp",
     title: "Camp",
     description:
       "Get expert training in coding, data, design, and digital marketing",

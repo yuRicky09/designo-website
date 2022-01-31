@@ -28,17 +28,17 @@ import { provide, inject } from "vue";
 
 const graphicDesignProjects = [
   {
-    imgName: "image-change.jpg",
+    imgName: "image-change",
     title: "Tim Brown",
     description: "A book cover designed for Tim Brown’s new release, ‘Change’",
   },
   {
-    imgName: "image-boxed-water.jpg",
+    imgName: "image-boxed-water",
     title: "Boxed water",
     description: "A simple packaging concept made for Boxed Water",
   },
   {
-    imgName: "image-science.jpg",
+    imgName: "image-science",
     title: "Science!",
     description: "A poster made in collaboration with the Federal Art Project",
   },

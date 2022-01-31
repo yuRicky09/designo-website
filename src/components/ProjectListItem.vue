@@ -33,9 +33,9 @@ const props = defineProps({
 });
 
 // Dynamic import project's image
-const imgFileName = inject("imgFileName");
-const imgPath = `../assets/${imgFileName}/desktop/${props.project.imgName}`;
+const imgFile = inject("imgFileName");
+const imgPath = `${imgFile}/desktop`;
 const { imgUrl, getImgUrl } = useImage();
 
-getImgUrl(imgPath);
+getImgUrl(imgPath, props.project.imgName);
 </script>

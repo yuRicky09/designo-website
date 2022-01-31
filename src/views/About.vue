@@ -23,7 +23,7 @@ const aboutCards = [
         "Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients' audiences.",
       paragraphTwo: null,
     },
-    imgName: "image-about-hero.jpg",
+    imgName: "image-about-hero",
   },
   {
     title: "World-class talent",
@@ -33,7 +33,7 @@ const aboutCards = [
       paragraphTwo:
         "Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important. We give great importance to craftsmanship, service, and prompt delivery. Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission.",
     },
-    imgName: "image-world-class-talent.jpg",
+    imgName: "image-world-class-talent",
   },
   {
     title: "The real deal",
@@ -43,7 +43,7 @@ const aboutCards = [
       paragraphTwo:
         " We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.",
     },
-    imgName: "image-real-deal.jpg",
+    imgName: "image-real-deal",
   },
 ];
 
