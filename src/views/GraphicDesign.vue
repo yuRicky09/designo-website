@@ -10,7 +10,7 @@
     <div
       class="flex flex-col gap-6 -mb-4 lg:flex-row lg:gap-8 lg:justify-center"
     >
-      <HomeLinkCard
+      <NavigationLinkCard
         v-for="card in linksCards"
         :key="card.title"
         :card="card"
@@ -23,7 +23,7 @@
 <script setup>
 import ProjectList from "@/components/ProjectList.vue";
 import BaseBannerHeader from "@/components/UI/BaseBannerHeader.vue";
-import HomeLinkCard from "@/components/HomeLinkCard.vue";
+import NavigationLinkCard from "@/components/NavigationLinkCard.vue";
 import { provide, inject } from "vue";
 
 const graphicDesignProjects = [

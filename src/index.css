@@ -47,3 +47,9 @@
     @apply cursor-pointer transition-transform  hover:rotate-[30deg] hover:brightness-125 duration-300;
   }
 }
+
+@layer utilities {
+  html.sr .load-hidden {
+    @apply invisible;
+  }
+}

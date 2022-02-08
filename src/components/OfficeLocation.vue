@@ -2,19 +2,19 @@
   <div class="-mx-6 md:mx-0 md:flex md:flex-col md:gap-6 xl:flex-row">
     <div
       :id="mapId"
-      class="h-[20rem] md:rounded-lg xl:w-[22rem] xl:h-auto"
+      class="h-[20rem] md:rounded-lg xl:h-auto xl:w-[22rem]"
       :class="props.itemOrder"
     ></div>
 
     <div
-      class="relative bg-lightPeach flex flex-col items-center text-center px-6 py-20 before:bg-pattern-hero-about-mobile before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-20 before:bg-no-repeat md:rounded-lg before:bg-top md:items-start md:text-left md:px-20 md:before:bg-pages-intro-tablet md:before:bg-[top_3rem_left_-20rem] xl:flex-1"
+      class="bg-lightPeach before:bg-pattern-hero-about-mobile md:before:bg-pages-intro-tablet relative flex flex-col items-center px-6 py-20 text-center before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-top before:bg-no-repeat before:opacity-20 md:items-start md:rounded-lg md:px-20 md:text-left md:before:bg-[top_3rem_left_-20rem] xl:flex-1"
     >
       <h2 class="text-primaryPeach mb-4 md:mb-6">
         {{ office.location }}
       </h2>
 
       <div class="md:flex md:flex-row md:gap-20">
-        <div class="flex flex-col gap-1 mb-4">
+        <div class="mb-4 flex flex-col gap-1">
           <h3 class="font-bold tracking-normal">{{ office.name }}</h3>
           <p>{{ office.address.street }}</p>
           <p>{{ office.address.state }}</p>

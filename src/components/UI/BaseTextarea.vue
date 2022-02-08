@@ -5,10 +5,10 @@
       v-model="inputValue"
       rows="5"
       placeholder="Your message"
-      class="bg-stone-600/10 placeholder:text-stone-200 rounded-lg resize-none"
+      class="resize-none rounded-lg bg-stone-600/10 placeholder:text-stone-200"
     ></textarea>
     <span
-      class="flex gap-2 h-[1.5rem] w-full text-red-500 font-bold text-left"
+      class="flex h-[1.5rem] w-full gap-2 text-left font-bold text-red-500"
       :class="{ invisible: !errorMessage, visible: errorMessage }"
       ><ErrorIcon />
       {{ errorMessage }}

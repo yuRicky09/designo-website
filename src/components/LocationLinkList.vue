@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex gap-12 flex-col items-center my-28 lg:flex-row lg:justify-evenly xl:my-40"
+    class="my-28 flex flex-col items-center gap-12 lg:flex-row lg:justify-evenly xl:my-40"
   >
     <LocationLinkListItem
       v-for="link in locationLinks"

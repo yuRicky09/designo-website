@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex flex-col gap-5 items-center text-center md:flex-row md:text-left md:gap-12 xl:flex-col xl:text-center"
+    class="flex flex-col items-center gap-5 text-center md:flex-row md:gap-12 md:text-left xl:flex-col xl:text-center"
   >
     <div
-      class="relative before:bg-[url('@/assets/shared/desktop/bg-pattern-small-circle.svg')] before:bg-no-repeat before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[-1]"
+      class="relative before:absolute before:top-0 before:left-0 before:z-[-1] before:h-full before:w-full before:bg-[url('@/assets/shared/desktop/bg-pattern-small-circle.svg')] before:bg-no-repeat"
       :class="[card.bgRotateDeg]"
     >
       <img
@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="flex flex-col gap-5 items-center">
+    <div class="flex flex-col items-center gap-5">
       <h3 class="uppercase md:self-start xl:self-center">{{ card.title }}</h3>
       <p>{{ card.description }}</p>
     </div>

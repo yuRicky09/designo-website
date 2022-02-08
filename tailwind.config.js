@@ -63,8 +63,8 @@ module.exports = {
       animation: {
         popUp: "popUp 0.4s ease-in-out",
         popUpReverse: "popUp 0.4s ease-in-out reverse",
-        fade: "fade 0.4s ease-in-out",
-        fadeReverse: "fade 0.4s ease-in-out reverse",
+        fade: "fade 0.2s ease-out",
+        fadeReverse: "fade 0.35s ease-out reverse",
       },
     },
   },
