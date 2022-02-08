@@ -1,14 +1,14 @@
 <template>
   <div
-    class="-mx-6 flex flex-col items-center sm:mx-20 md:mx-0 md:rounded-lg overflow-hidden md:mb-28 lg:mb-32 xl:mb-40 xl:flex-row"
+    class="-mx-6 flex flex-col items-center overflow-hidden sm:mx-20 md:mx-0 md:mb-28 md:rounded-lg lg:mb-32 xl:mb-40 xl:flex-row"
     :class="cardCustomStyle.bgColor"
   >
-    <img :src="imgUrl" :alt="card.title" class="w-full h-full object-cover" />
+    <img :src="imgUrl" :alt="card.title" class="h-full w-full object-cover" />
     <div
-      class="px-6 py-20 text-center relative before:absolute before:opacity-20 before:top-0 before:left-0 before:w-full before:h-full before:bg-no-repeat md:px-16 lg:self-stretch lg:flex lg:items-center lg:justify-center lg:flex-col lg:px-20 lg:text-left xl:px-24"
+      class="relative px-6 py-20 text-center before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-no-repeat before:opacity-20 md:px-16 lg:flex lg:flex-col lg:items-center lg:justify-center lg:self-stretch lg:px-20 lg:text-left xl:px-24"
       :class="[cardCustomStyle.bgImg, cardItemOrder]"
     >
-      <h2 class="mb-6 relative z-10" :class="cardCustomStyle.titleColor">
+      <h2 class="relative z-10 mb-6" :class="cardCustomStyle.titleColor">
         {{ card.title }}
       </h2>
       <p class="relative z-10" :class="cardCustomStyle.textColor">

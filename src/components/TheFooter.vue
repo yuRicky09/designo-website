@@ -1,9 +1,9 @@
 <template>
   <div
-    class="max-w-[90rem] mx-auto text-white pt-40 px-6 pb-16 md:px-10 lg:px-24 xl:px-40 xl:pt-52"
+    class="mx-auto max-w-[90rem] px-6 pt-40 pb-16 text-white md:px-10 lg:px-24 xl:px-40 xl:pt-52"
   >
     <div
-      class="flex flex-col items-center text-center md:flex-row justify-between md:pb-12 md:border-b-2 md:border-white md:border-opacity-10"
+      class="flex flex-col items-center justify-between text-center md:flex-row md:border-b-2 md:border-white md:border-opacity-10 md:pb-12"
     >
       <router-link :to="{ name: 'Home' }">
         <img
@@ -12,10 +12,10 @@
           class="w-52"
         />
       </router-link>
-      <div class="h-[2px] bg-white bg-opacity-10 w-full my-6 md:hidden"></div>
+      <div class="my-6 h-[2px] w-full bg-white bg-opacity-10 md:hidden"></div>
       <div>
         <ul
-          class="uppercase flex flex-col items-center gap-3 md:flex-row md:gap-10"
+          class="flex flex-col items-center gap-3 uppercase md:flex-row md:gap-10"
         >
           <li>
             <router-link
@@ -43,19 +43,19 @@
     </div>
 
     <div
-      class="flex flex-col items-center text-center gap-10 mt-10 md:flex-row md:gap-12 lg:gap-20 xl:gap-52"
+      class="mt-10 flex flex-col items-center gap-10 text-center md:flex-row md:gap-12 lg:gap-20 xl:gap-52"
     >
       <div class="opacity-50">
         <p class="font-bold">Designo Central Office</p>
         <p>3886 Wellington Street</p>
         <p>Toronto, Ontario M9C 3J5</p>
       </div>
-      <div class="opacity-50 font-bold">
+      <div class="font-bold opacity-50">
         <p>Contact Us (Central Office)</p>
         <p>P : +1 253-863-8967</p>
         <p>M : contact@designo.co</p>
       </div>
-      <div class="flex items-center gap-4 md:flex-1 md:self-end md:justify-end">
+      <div class="flex items-center gap-4 md:flex-1 md:justify-end md:self-end">
         <FacebookIcon class="icon" />
         <YoutubeIcon class="icon" />
         <TwitterIcon class="icon" />

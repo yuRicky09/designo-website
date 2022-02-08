@@ -2,7 +2,7 @@
   <div class="relative my-5">
     <input v-model="inputValue" :type="type" class="peer" />
     <label
-      class="absolute bottom-8 left-2 text-stone-200 font-medium transition-all duration-300 peer-focus:-translate-y-8 peer-focus:text-xs pointer-events-none"
+      class="pointer-events-none absolute bottom-8 left-2 font-medium text-stone-200 transition-all duration-300 peer-focus:-translate-y-8 peer-focus:text-xs"
       :class="{
         '-translate-y-8 text-xs': !!inputValue,
         'text-green-600': meta.valid && meta.dirty,
@@ -11,14 +11,14 @@
       >{{ label }}</label
     >
     <div
-      class="h-[2px] bg-lightGray transition-colors duration-500 mb-1"
+      class="bg-lightGray mb-1 h-[2px] transition-colors duration-500"
       :class="{
         'bg-green-600': meta.valid && meta.dirty,
         'bg-red-500': !!errorMessage,
       }"
     ></div>
     <span
-      class="flex gap-2 h-[1.5rem] w-full text-red-500 font-bold text-left"
+      class="flex h-[1.5rem] w-full gap-2 text-left font-bold text-red-500"
       :class="{ invisible: !errorMessage, visible: errorMessage }"
       ><ErrorIcon />
       {{ errorMessage }}

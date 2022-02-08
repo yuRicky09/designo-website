@@ -1,18 +1,18 @@
 <template>
   <BaseCard
-    class="flex flex-col bg-lightPeach md:flex-row md:items-center lg:flex-col cursor-pointer group hover:bg-primaryPeach"
+    class="bg-lightPeach group hover:bg-primaryPeach flex cursor-pointer flex-col md:flex-row md:items-center lg:flex-col"
   >
     <div class="overflow-hidden md:w-1/2 lg:w-full">
       <img
         :src="imgUrl"
         alt="Project Image"
-        class="w-full h-full object-cover transition-transform group-hover:scale-110 group-hover:duration-300 duration-500"
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:duration-300"
       />
     </div>
     <div
-      class="text-center py-8 px-7 md:w-1/2 lg:w-auto transition-colors duration-300"
+      class="py-8 px-7 text-center transition-colors duration-300 md:w-1/2 lg:w-auto"
     >
-      <h3 class="text-primaryPeach uppercase mb-5 group-hover:text-white">
+      <h3 class="text-primaryPeach mb-5 uppercase group-hover:text-white">
         {{ project.title }}
       </h3>
       <p class="group-hover:text-white">{{ project.description }}</p>

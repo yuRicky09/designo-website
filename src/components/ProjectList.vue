@@ -6,12 +6,14 @@
       v-for="project in projectList"
       :key="project.title"
       :project="project"
+      class="project-list load-hidden"
     />
   </div>
 </template>
 
 <script setup>
 import ProjectListItem from "@/components/ProjectListItem.vue";
+import { useScrollReveal } from "@/composables/useScrollReveal";
 
 defineProps({
   projectList: {
@@ -19,4 +21,15 @@ defineProps({
     required: true,
   },
 });
+
+const { setScrollReveal, removeScrollReveal } = useScrollReveal();
+
+setScrollReveal(".project-list", {
+  origin: "bottom",
+  distance: "100px",
+  duration: 500,
+  easing: "ease-out",
+});
+
+removeScrollReveal(".project-list");
 </script>

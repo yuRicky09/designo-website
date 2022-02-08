@@ -1,7 +1,7 @@
 <template>
-  <div class="uppercase flex flex-col items-center">
+  <div class="flex flex-col items-center uppercase">
     <div
-      class="mb-12 relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-small-circle before:bg-no-repeat before:bg-contain"
+      class="before:bg-small-circle relative mb-12 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-contain before:bg-no-repeat"
       :class="link.bgRotateDeg"
     >
       <img :src="link.imgUrl" :alt="link.locationName" />

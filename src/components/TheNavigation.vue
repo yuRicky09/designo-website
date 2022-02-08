@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex justify-between items-center py-9 relative z-50 bg-white uppercase -mx-6 px-6 md:mx-0 md:px-0 md:py-16"
+    class="relative z-50 -mx-6 flex items-center justify-between bg-white py-9 px-6 uppercase md:mx-0 md:px-0 md:py-16"
   >
     <router-link :to="{ name: 'Home' }">
       <img
@@ -13,17 +13,17 @@
     <!-- desktop-nav -->
     <div class="hidden md:block">
       <ul class="text-darkGray flex items-center gap-8">
-        <li>
+        <li class="desktop-nav-link">
           <router-link :to="{ name: 'About' }" class="nav-link"
             >Our Company</router-link
           >
         </li>
-        <li>
+        <li class="desktop-nav-link">
           <router-link :to="{ name: 'Locations' }" class="nav-link"
             >Locations</router-link
           >
         </li>
-        <li>
+        <li class="desktop-nav-link">
           <router-link :to="{ name: 'Contact' }" class="nav-link"
             >Contact</router-link
           >
@@ -39,9 +39,9 @@
     <Transition name="mobile-nav">
       <div
         v-show="mobileNavIsShow"
-        class="absolute z-40 top-full left-0 w-full origin-top-right md:hidden"
+        class="absolute top-full left-0 z-40 w-full origin-top-right md:hidden"
       >
-        <ul class="text-white px-6 py-12 bg-primaryBlack text-2xl">
+        <ul class="bg-primaryBlack px-6 py-12 text-2xl text-white">
           <li class="mb-4" @click="closeMobileNav">
             <router-link :to="{ name: 'About' }">Our Company</router-link>
           </li>
@@ -61,7 +61,7 @@
   <teleport to="body">
     <div
       v-show="mobileNavIsShow"
-      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10 md:hidden"
+      class="fixed top-0 left-0 z-10 h-full w-full bg-black bg-opacity-20 md:hidden"
       @click="mobileNavIsShow = false"
     ></div>
   </teleport>
@@ -71,6 +71,7 @@
 import CloseIcon from "@/assets/shared/mobile/icon-close.svg";
 import HamburgerIcon from "@/assets/shared/mobile/icon-hamburger.svg";
 import { ref } from "vue";
+import { useScrollReveal } from "@/composables/useScrollReveal";
 
 const mobileNavIsShow = ref(false);
 function showMobileNav() {
@@ -80,6 +81,16 @@ function showMobileNav() {
 function closeMobileNav() {
   mobileNavIsShow.value = false;
 }
+
+const { setScrollReveal, removeScrollReveal } = useScrollReveal();
+
+setScrollReveal(".desktop-nav-link", {
+  duration: 500,
+  easing: "ease-in-out",
+  interval: 300,
+});
+
+removeScrollReveal(".desktop-nav-link");
 </script>
 
 <style lang="postcss" scoped>
