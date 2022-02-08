@@ -55,16 +55,10 @@ module.exports = {
           "0%": { transform: "scale(0)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        fade: {
-          "0%": { transform: "translateY(2rem)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
       },
       animation: {
         popUp: "popUp 0.4s ease-in-out",
         popUpReverse: "popUp 0.4s ease-in-out reverse",
-        fade: "fade 0.2s ease-out",
-        fadeReverse: "fade 0.35s ease-out reverse",
       },
     },
   },
