@@ -13,7 +13,9 @@
     </div>
 
     <div>
-      <button class="btn">Get in touch</button>
+      <router-link class="btn" :to="{ name: 'Contact' }"
+        >Get in touch</router-link
+      >
     </div>
   </div>
 </template>

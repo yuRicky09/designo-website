@@ -14,7 +14,9 @@
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <button class="btn">Learn more</button>
+        <router-link class="btn" :to="{ name: 'About' }"
+          >Learn more</router-link
+        >
       </div>
 
       <img
